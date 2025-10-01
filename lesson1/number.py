@@ -13,18 +13,18 @@
 """
 
 class Number:
-
+    value: int
     def __init__(self, value):
-        ...
+        self.value = value
 
-    def ...(self):
-        ...
+    def get(self):
+        return self.value
 
-    def ...:
-        ...
+    def add(self, other):
+        self.value += other
 
-    def ...:
-        ...
+    def substract(self, other):
+        self.value -= other
 
 
 # код для проверки 
