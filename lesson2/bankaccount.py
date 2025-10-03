@@ -12,7 +12,22 @@
 
 
 class BankAccount:
-    pass
+    balance: float
+    def __init__(self, balance):
+        self.balance = balance
+
+
+    def deposit(self, amount):
+        self.balance += amount
+
+
+    def withdraw(self, amount):
+        self.balance -= amount
+
+
+    def close(self):
+        self.balance = 0
+
 
 
 # код для проверки 
