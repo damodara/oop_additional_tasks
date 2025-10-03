@@ -23,9 +23,6 @@ class User:
 
     @property
     def name(self):
-        """
-        Возвращает имя пользователя.
-        """
         return self._name
 
 
@@ -39,7 +36,7 @@ class User:
         if len(new_password) > 5:
             self._password = new_password
         else:
-            raise ValueError("Пароль должен содержать минимум 6 символов и хотя бы одну цифру.")
+            raise ValueError("Пароль должен содержать минимум 6 символов")
 
 
     @property
