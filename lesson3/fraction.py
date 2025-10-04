@@ -10,7 +10,25 @@
 
 
 class Fraction:
-    pass
+    def __init__(self, numerator, denominator):
+        if denominator == 0:
+            raise ValueError("Знаменатель не должен быть равен нулю.")
+        self.numerator = numerator
+        self.denominator = denominator
+
+
+    def __repr__(self):
+        return f'Fraction({self.numerator}, {self.denominator})'
+
+
+    def __str__(self):
+        return f'{self.numerator}/{self.denominator}'
+
+
+    def __add__(self, other):
+        new_numerator = self.numerator * other.denominator + other.numerator * self.denominator
+        new_denominator = self.denominator * other.denominator
+        return Fraction(new_numerator, new_denominator)
 
 
 # код для проверки 
